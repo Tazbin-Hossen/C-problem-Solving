@@ -14,7 +14,7 @@ int main(){
     for(ll i=0;i<vec.size();i++)
     {
         if(vec[i]==0){ans=true;}
-        else{ans=false;break;}
+        else{ans=false;break;} 
     }
     if(ans==true){cout<<"EASY";}
     else{cout<<"HARD";}
