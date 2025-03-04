@@ -1,23 +1,15 @@
 #include<bits/stdc++.h>
-#include<vector>
 #define ll long long
 using namespace std;
 int main(){
     ll n; cin>>n;
-    ll ans=0;
-    while(n--)
+    bool ans=true;
+    vector<ll>vec;
+    for(ll i=0;i<n;i++){ll x; cin>>x; vec.push_back(x);}
+    sort(vec.begin(),vec.end());
+    for(ll i=0;i<vec.size();i++)
     {
-        string s; cin>>s;
-        if(s=="X++" || s=="++X" )
-        {
-            ans+=1;
-        }
-        else
-        {
-            ans-=1;
-        }
+        if(vec)
     }
-    cout<<ans;
-
     return 0;
 }

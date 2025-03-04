@@ -1,18 +1,17 @@
 #include<bits/stdc++.h>
-#include<vector>
 #define ll long long
 using namespace std;
 int main(){
-    string s; cin>>s;
-    ll ans=1;
-    for(ll i=0;i<s.length();i++)
+    string str; cin>>str;
+    set<char>st;
+    for(ll i=0;i<str.length();i++)
     {
-        for(ll j=0;j<s.length();j++)
-        {
-            if(s[i]!=s[j]){ans++;}
-        }
+        st.insert(str[i]);
     }
-    if(ans%2==0){cout<<"CHAT WITH HER!";}
-    else{cout<<"IGNORE HIM!";}
+    if(st.size()%2!=0){cout<<"IGNORE HIM!";}
+    else{cout<<"CHAT WITH HER!";}
+   
+
+
     return 0;
 }

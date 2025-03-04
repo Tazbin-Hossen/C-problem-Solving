@@ -1,21 +1,24 @@
 #include<bits/stdc++.h>
-#include<vector>
 #define ll long long
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 using namespace std;
 int main(){
-    string s1,s2; cin>>s1;
-    for(ll i=0;i<s1.length();i++)
+    optimize();
+    string str,ans;
+    cin>>str;
+    for(auto u:str)
     {
-        if(s1[i]=='a'||s1[i]=='e'||s1[i]=='i'||s1[i]=='o'||s1[i]=='u'||s1[i]=='A'||s1[i]=='E'||s1[i]=='I'||s1[i]=='O'||s1[i]=='U'||s1[i]=='Y'||s1[i]=='y')
+        char c=tolower(u);
+        if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='y')
         {
             continue;
         }
         else
         {
-            s2+='.';
-            s2+=tolower(s1[i]);
+            ans+='.';
+            ans+=c;
         }
     }
-    cout<<s2;
+    cout<<ans<<endl;
     return 0;
 }

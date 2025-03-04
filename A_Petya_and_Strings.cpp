@@ -1,17 +1,21 @@
 #include<bits/stdc++.h>
-#include<vector>
 #define ll long long
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 using namespace std;
 int main(){
-    string s1,s2; cin>>s1>>s2;
-    char ss1='a',ss2='a';
-    for(ll i=0;i<s1.length();i++)
+    optimize();
+    ll count=0;
+    string str1,str2; 
+    cin>>str1>>str2;
+    for(ll i=0;i<str1.length();i++)
     {
-        if(tolower(s1[i])>ss1){ss1=tolower(s1[i]);}
-        if(tolower(s2[i])>ss2){ss2=tolower(s2[i]);}
+        char x=tolower(str1[i]);
+        char y=tolower(str2[i]);
+        if(x<y){cout<<-1;break;}
+        if(x==y){count++;}
+        else if(x>y){cout<<1;break;}
+
     }
-    if(ss1>ss2){cout<<"1";}
-    else if(ss1==ss2){cout<<"0";}
-    else{cout<<"-1";}
+    if(count==str1.length()){cout<<0;}
     return 0;
 }

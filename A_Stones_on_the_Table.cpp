@@ -1,40 +1,17 @@
 #include<bits/stdc++.h>
-#include<vector>
 #define ll long long
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 using namespace std;
 int main(){
-    ll n; cin>>n;
-    bool r=true,g=true,b=true;
-    ll red=0,green=0,blue=0;
-    vector<char>str(n);
-    for(ll i=0;i<n;i++)
+    optimize();
+    ll n,count=0; cin>>n;
+    string str;cin>>str;
+    for(ll i=0;i<n-1;i++)
     {
-        cin>>str[i];
+        if(str[i]=='R'&& str[i]==str[i+1]){count++;}
+        if(str[i]=='B'&& str[i]==str[i+1]){count++;}
+        if(str[i]=='G'&& str[i]==str[i+1]){count++;}
     }
-    for(ll i=0;i<str.size();i++)
-    {
-        for(ll j=i+1;j<str.size();j++)
-        {
-            if(str[j]=='R'&&str[i]=='R')
-            {
-                red++;
-                g=false;
-                b=false;
-            }
-            if(str[j]=='G'&&str[i]=='G')
-            {
-                green++;
-                r=false;
-                b=false;
-            }
-            if(str[j]=='B'&&str[i]=='B')
-            {
-                blue++;
-                r=false;
-                g=false;
-            }
-
-        }
-    }
+    cout<<count;
     return 0;
 }
