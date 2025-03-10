@@ -6,10 +6,14 @@ using namespace std;
 int main()
 {
     optimize()
-     ll a,b; char ch;cin>>a>>ch>>b;
-     if(ch=='+'){cout<<a+b;}
-     else if(ch=='-'){cout<<a-b;}
-     else if(ch=='*'){cout<<a*b;}
-     else{cout<<a/b;}
+     ll t; cin>>t;
+     while(t--)
+     {
+        ll a,b; cin>>a>>b;
+        if(a>b){cout<<a+1<<nl;}
+        else if(a==1 && b==1){cout<<2<<nl;}
+        else{cout<<b+1<<nl;}
+     }
+
     return 0;
 }

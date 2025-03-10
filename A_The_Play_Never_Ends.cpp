@@ -6,10 +6,12 @@ using namespace std;
 int main()
 {
     optimize()
-     ll a,b; char ch;cin>>a>>ch>>b;
-     if(ch=='+'){cout<<a+b;}
-     else if(ch=='-'){cout<<a-b;}
-     else if(ch=='*'){cout<<a*b;}
-     else{cout<<a/b;}
+     ll t; cin>>t;
+     while(t--)
+     {
+        ll n; cin>>n;
+        if(n%3==1){cout<<"YES"<<nl;}
+        else{cout<<"NO"<<nl;}
+     }
     return 0;
 }

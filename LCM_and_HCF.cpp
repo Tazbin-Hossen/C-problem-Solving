@@ -9,16 +9,16 @@ int main()
      ll t; cin>>t;
      while(t--)
      {
-        ll n; cin>>n;
-        bool ans=true;
-
-        while(n>1)
+        ll a,b; 
+        cin>>a>>b;
+        ll t1=a,t2=b;
+        while(b!=0)
         {
-            if(n%2!=0){ans=false;break;}
-            n=n/2;
+            ll remm=a%b;
+            ll a=b,b=remm;
         }
-        if(ans==false){cout<<"YES"<<nl;}
-        else{cout<<"NO"<<nl;}
+        ll lcm=(t1*t2)/t1;
+        cout<<lcm<<" "<<a<<nl;
      }
     return 0;
 }

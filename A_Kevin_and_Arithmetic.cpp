@@ -9,31 +9,22 @@ int main()
      ll t; cin>>t;
      while(t--)
      {
-        ll n; cin>>n;
-        n-=2;
+        ll n,odd=0,even=0; cin>>n;
         vector<ll>vec;
-        bool ans=false;
         for (ll i = 0; i < n; i++)
         {
             ll x; cin>>x;
             vec.push_back(x);
         }
-        for (ll i = 1; i < n-1; i++)
+        for(auto x:vec)
         {
-            if(vec[i]==0 && vec[i-1]==1 && vec[i+1]==1)
-            {
-                ans=true;
-                break;
-            }
+            if(x%2==0){even++;}
+            else{odd++;}
         }
-        if(ans==true)
-        {
-            cout<<"NO"<<nl;
-        }
-        else
-        {
-            cout<<"YES"<<nl;
-        }
-    }
+        if(even>=1){cout<<odd+1<<nl;}
+        else if(even==0&&odd>1){cout<<odd-1<<nl;}
+        
+        else{cout<<0<<nl;}  
+     }
     return 0;
 }

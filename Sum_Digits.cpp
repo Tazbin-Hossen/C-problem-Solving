@@ -6,10 +6,14 @@ using namespace std;
 int main()
 {
     optimize()
-     ll a,b; char ch;cin>>a>>ch>>b;
-     if(ch=='+'){cout<<a+b;}
-     else if(ch=='-'){cout<<a-b;}
-     else if(ch=='*'){cout<<a*b;}
-     else{cout<<a/b;}
+     ll n,total=0; cin>>n;
+     string s; cin>>s;
+     for(auto x:s)
+     {
+       
+        ll m=x-'0';
+        total+=m; 
+     }
+     cout<<total;
     return 0;
 }

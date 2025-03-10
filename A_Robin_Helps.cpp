@@ -1,28 +1,35 @@
 #include<bits/stdc++.h>
 #define ll long long
+#define nl "\n"
 #define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 using namespace std;
-int main(){
-    optimize();
-    ll t; cin>>t;
-    while(t--)
-    {
-        ll a, b; cin>>a>>b;
+int main()
+{
+    optimize()
+     ll t; cin>>t;
+     while(t--)
+     {
+        ll n,k; cin>>n>>k;
+        ll gold=0,donate=0;
         vector<ll>vec;
-        for(ll i=0;i<a;i++)
+        for (ll i = 0; i < n; i++)
         {
             ll x; cin>>x;
             vec.push_back(x);
         }
-        ll coin=0,zero=0;
-        for(ll i=0;i<vec.size();i++)
+        for (ll i = 0; i < n; i++)
         {
-            if(coin>0&&vec[i]==0){zero++;}
-            if(vec[i]>=b){coin+=vec[i];}
+            if(vec[i]>=k)
+            {
+                gold+=vec[i];
+            }
+            else if(gold>=1 && vec[i]==0)
+            {
+                donate++;
+                gold--;
+            }
         }
-        if(coin>=zero){cout<<zero<<endl;}
-        else{cout<<coin<<endl;}
-        
-    }
+        cout<<donate<<nl;   
+     }
     return 0;
 }
