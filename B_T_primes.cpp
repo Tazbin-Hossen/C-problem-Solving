@@ -1,20 +1,20 @@
 #include<bits/stdc++.h>
 #define ll long long
+#define nl "\n"
 #define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 using namespace std;
-int main(){
-    optimize();
-    int n,cnt=0; cin>>n;
-    vector<int>vec;
-    for (int i = 0; i < n; i++)
-    {
-        int x; cin>>x;
-        vec.push_back(x);
-    }
-    for (int i = 0; i < n; i++)
-    {
-        if(vec[i]==4||sqrt(vec[i])>10){cout<<"YES"<<endl;}
-        else{cout<<"NO"<<endl;}
-    }
+int main()
+{
+    optimize()
+     ll n,cnt=0;
+     cin>>n;
+     for (ll i = 0; i < n; i++)
+     {
+        for (ll j = 0; j < n; j++)
+        {
+            cnt = cnt+1;
+        }
+     }
+     cout<<cnt;
     return 0;
 }

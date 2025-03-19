@@ -1,24 +1,22 @@
 #include<bits/stdc++.h>
 #define ll long long
+#define nl "\n"
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 using namespace std;
-int main(){
-    ll t; cin>>t;
-    while(t--)
-    {
-        ll a; cin>>a;
-        ll sum=(a*(a+1))/2;
-        for(ll i=0;i<=a;i++)
+int main()
+{
+    optimize()
+     ll t; cin>>t;
+     while(t--)
+     {
+        ll n,sum=0; cin>>n;
+        ll all_sum = n * (n+1) / 2;
+        for (ll i = 1; i <= n; i*=2)
         {
-            ll preAns=pow(2,i);
-            cout<<preAns<<" ";
-            if(preAns>=1&&preAns<=a)
-            {
-                sum-=(2*i);
-            }
-            else{sum+=i;}
-            preAns=0;
+            sum+=i;
         }
-        cout<<sum<<endl;
-    }
+        cout<<all_sum - (2*sum)<<nl;
+        
+     }
     return 0;
 }

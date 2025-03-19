@@ -9,16 +9,15 @@ int main()
      ll t; cin>>t;
      while(t--)
      {
-        ll a,b; 
-        cin>>a>>b;
-        ll t1=a,t2=b;
+        ll a,b; cin>>a>>b;
+        ll t1 = a, t2 = b;
         while(b!=0)
         {
-            ll remm=a%b;
-            ll a=b,b=remm;
+            ll rem = a%b;
+            a = b;
+            b = rem;
         }
-        ll lcm=(t1*t2)/t1;
-        cout<<lcm<<" "<<a<<nl;
+        cout<<(t1*t2)/a<< " " << a <<endl;
      }
     return 0;
 }

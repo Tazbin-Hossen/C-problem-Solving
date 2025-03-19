@@ -1,29 +1,25 @@
 #include<bits/stdc++.h>
-#include<vector>
 #define ll long long
+#define nl "\n"
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 using namespace std;
-int main(){
-    ll a,b,c; cin>>a>>b>>c;
-    bool loop=true;
-    while(loop)
-    {
-        if(c==0){cout<<"Yes";break;}
-        if(c<0){cout<<"No";break;}
-        if(c==a&&c==b){cout<<"Yes";break;}
-        else if(c-a==0 || c-b==0){cout<<"Yes";break;}
-        else if(a>c&&b>c){cout<<"No";break;}
-        else if(b>c&& a<=c){c=c-a;}
-        else if(a>c && b<=c){c=c-b;}
-        else if(a<c && b<c)
+int main()
+{
+    optimize()
+     ll a, b, c; cin>>a>>b>>c;
+     for (ll i = 0; i <= c; i+=a)
+     {
+        for (ll j = 0; j <= c; j+=b)
         {
-            if(c%a==0||c%b==0)
-            {cout<<"Yes";break;}
-            else
+            if(i+j == c)
             {
-                if((a%2!=0&&b%2==0)&&c%2!=0){cout<<"Yes";break;}
-                else{cout<<"No";break;}
+                cout<<"Yes";
+                return 0;
             }
         }
-    }
+        
+     }
+     cout<<"No";
+     
     return 0;
 }

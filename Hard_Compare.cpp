@@ -1,15 +1,20 @@
 #include<bits/stdc++.h>
-#include<vector>
 #define ll long long
+#define nl "\n"
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 using namespace std;
-int sum(int x,int y)
+int main()
 {
-    int suum=x+y;
-    return sqrt(suum);
-
-}
-int main(){
-    ll n1,n2; cin>>n1>>n2;
-    cout<<sum(n1,n2);
+    optimize()
+     ll a , b ,c, d;
+     cin>> a >> b >> c >>d;
+     if( b * log(a) > d * log (c))
+     {
+        cout<<"YES";
+     }
+     else
+     {
+         cout<<"NO";
+     }
     return 0;
 }

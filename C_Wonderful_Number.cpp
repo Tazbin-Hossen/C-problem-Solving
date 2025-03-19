@@ -1,28 +1,30 @@
 #include<bits/stdc++.h>
-#include<vector>
 #define ll long long
+#define nl "\n"
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 using namespace std;
-int main(){
-    ll n; cin>>n;
-    ll power=1,binary=0,temp,sum=0;
-    if(n%2==0){cout<<"NO";}
-    else{
-        while(n>0)
-        {
-            ll r=n%2;
-            n/=2;
-            binary+=(r*power);
-            power=power*10;  
-        }
-        temp=binary;
-        while(binary>0)
-        {
-            ll rem=binary%10;
-            sum=(sum*10)+rem;
-            binary/=10;
-        }
-        if(sum==temp){cout<<"YES";}
-        else{cout<<"NO";}
-    }
+int main()
+{
+    optimize()
+     ll n; cin>>n;
+     ll m = n;
+     string s="";
+     while(n>0)
+     {
+        s+=(n%2);
+        n = n/2;
+     }
+     string main_string = s;
+     reverse(s.begin(),s.end());
+     
+     if(s == main_string and m%2!=0)
+     {
+        cout<<"YES";
+     }
+     else
+     {
+        cout<<"NO";
+     }
+
     return 0;
 }

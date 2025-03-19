@@ -1,16 +1,18 @@
 #include<bits/stdc++.h>
-#include<cmath>
-#include<vector>
 #define ll long long
+#define nl "\n"
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 using namespace std;
-int main(){
-   ll a,b; cin>>a>>b;
-   ll sum=0;
-   for(ll i=2;i<=b;i=i+2)
-   {
-    ll x=pow(a,i);
-    sum+=x;
-   }
-   cout<<sum<<endl;
+int main()
+{
+    optimize()
+     ll a,b,ans=0;  cin>>a>>b;
+     ll x = a;
+     for( ll i = 0; i <= b ;i+=2)
+     {
+         ans+=x;
+         x*=x;
+     }
+     cout<<ans-b;
     return 0;
 }
